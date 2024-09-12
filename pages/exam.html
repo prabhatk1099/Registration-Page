@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/exam.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Exam Page</h1>
+        <div id="modeSelection">
+            <h2>Select Exam Mode:</h2>
+            <label><input type="radio" name="mode" value="easy"> Easy</label>
+            <label><input type="radio" name="mode" value="moderate"> Moderate</label>
+            <label><input type="radio" name="mode" value="hard"> Hard</label>
+            <button id="startExam">Start Exam</button>
+        </div>
+        <div id="examContent" style="display: none;">
+            <div id="timer">Time Remaining: <span id="time"></span></div>
+            <div id="question"></div>
+            <textarea id="essay" rows="10" cols="50"></textarea>
+            <div id="wordCount">Words: <span id="currentCount">0</span> / <span id="maxCount"></span></div>
+            <div id="remainingWords">Remaining Words: <span id="remaining"></span></div>
+        </div>
+    </div>
+    <div id="warningModal" class="modal">
+        <div class="modal-content">
+            <h2>Warning!</h2>
+            <p>You have less than 2 minutes remaining.</p>
+            <p>Time left: <span id="warningTime"></span></p>
+        </div>
+    </div>
+    <script src="../assets/js/exam.js"></script>
+</body>
+</html>

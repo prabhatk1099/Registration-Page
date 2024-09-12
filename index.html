@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="firstName">First Name<span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+                <span class="error" id="firstNameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name<span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" required>
+                <span class="error" id="lastNameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email<span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number<span class="required">*</span></label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+                <span class="error" id="contactNumberError"></span>
+            </div>
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth<span class="required">*</span></label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                <span class="error" id="dateOfBirthError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password<span class="required">*</span></label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="passwordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password<span class="required">*</span></label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                <label for="acceptTerms">I accept the Terms and Conditions<span class="required">*</span></label>
+            </div>
+            <div class="terms-preview">
+                <p id="termsPreview"></p>
+                <button type="button" id="readMoreBtn">Read More</button>
+            </div>
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="button" id="clearBtn">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <h3>Terms and Conditions</h3>
+            <p id="fullTerms"></p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
